@@ -1,0 +1,30 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>netstandard2.0</TargetFramework>
+    <ProduceReferenceAssembly>true</ProduceReferenceAssembly>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Xamarin.Forms" Version="4.3.0.991211" />
+    <PackageReference Include="Xamarin.Essentials" Version="1.3.1" />
+    <PackageReference Include="XF.Material" Version="1.5.7" />
+    <PackageReference Include="Xam.Plugins.Forms.ImageCircle" Version="3.0.0.5" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="Themes\" />
+    <Folder Include="ViewModels\" />
+    <Folder Include="ViewModels\MainPage\" />
+    <Folder Include="Views\" />
+    <Folder Include="Views\Login\" />
+    <Folder Include="ViewModels\Login\" />
+    <Folder Include="Views\Dashboard\" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Remove="Theme\SetDarkTheme.resx" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Remove="Theme\SetDarkTheme.Designer.cs" />
+    <Compile Remove="Controls\EnumPicker.cs" />
+  </ItemGroup>
+</Project>

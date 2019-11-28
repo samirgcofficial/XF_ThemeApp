@@ -1,0 +1,38 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+              BackgroundColor="{DynamicResource PageBackgroundColor}"
+             xmlns:material="clr-namespace:XF.Material.Forms.UI;assembly=XF.Material" x:Class="EvvMobile.Views.Login.LoginPage">
+     <NavigationPage.TitleView>
+        <StackLayout Margin="0,0,0,0" HorizontalOptions="EndAndExpand" Orientation="Horizontal" VerticalOptions="Center">
+         <Button Clicked="Button_Clicked"  BackgroundColor="Transparent" ImageSource="PalletColorIcon.png" Style="{StaticResource NavigationButtonStyle}"/>
+        </StackLayout>
+    </NavigationPage.TitleView>
+    <ContentPage.Content>
+        <ScrollView>
+
+<Grid  Margin="20,0"  HorizontalOptions="FillAndExpand" RowSpacing="10"  VerticalOptions="CenterAndExpand" ColumnSpacing="0">
+                                <Grid.RowDefinitions>
+                                    <RowDefinition Height="AUTO" />
+                                    <RowDefinition Height="AUTO" />
+                                    <RowDefinition Height="AUTO" />
+                                    <RowDefinition Height="AUTO" />
+                                    <RowDefinition Height="AUTO" />
+                                </Grid.RowDefinitions>
+                                <StackLayout Grid.Row="0">
+                                   <Image Source="homemaker.png" HeightRequest="150" WidthRequest="150" HorizontalOptions="CenterAndExpand" VerticalOptions="CenterAndExpand"/>
+                                </StackLayout>
+                                <StackLayout Grid.Row="2"> 
+                                    <material:MaterialTextField  Style="{StaticResource EntryStyle}"  BackgroundColor="Transparent"   FloatingPlaceholderColor="Gray" UnderlineColor="Gray" Placeholder="Name" HelperText="Enter User Name" ErrorText="Enter User Name" Text="{Binding UserName}" AlwaysShowUnderline="True" InputType="Text" />
+                                </StackLayout>
+                                <StackLayout Grid.Row="3" >
+                                     <material:MaterialTextField  Style="{StaticResource EntryStyle}" BackgroundColor="Transparent" FloatingPlaceholderColor="Gray"  UnderlineColor="Gray"  Placeholder="Password" HelperText="Enter User Password" ErrorText="Enter User Password" Text="{Binding Password}"  AlwaysShowUnderline="True" InputType="Password" />
+                                </StackLayout>
+                                <Button  x:Name="LoginButtonPressed" Text="Sign In"   Grid.Row="4" Margin="20,20,20,50"   TextColor="White"                               
+                                 HorizontalOptions="FillAndExpand"
+                                 Style="{StaticResource ButtonStyle}"
+                                 Clicked="LoginButtonPressed_Clicked"/>
+           </Grid>
+        </ScrollView>
+    </ContentPage.Content>
+</ContentPage>

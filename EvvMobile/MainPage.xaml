@@ -1,0 +1,40 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:d="http://xamarin.com/schemas/2014/forms/design"
+              xmlns:local="clr-namespace:EvvMobile"
+             xmlns:ios="clr-namespace:Xamarin.Forms.PlatformConfiguration.iOSSpecific;assembly=Xamarin.Forms.Core"
+             BackgroundColor="{DynamicResource PageBackgroundColor}"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             xmlns:controls="clr-namespace:ImageCircle.Forms.Plugin.Abstractions;assembly=ImageCircle.Forms.Plugin"
+             mc:Ignorable="d" x:Class="EvvMobile.MainPage">
+  <ContentPage.Content>
+       <StackLayout Margin="20"
+                    Orientation="Vertical"
+                 VerticalOptions="CenterAndExpand">
+           <StackLayout Spacing="30" Orientation="Vertical">
+
+              <StackLayout Orientation="Horizontal">
+                  <Label VerticalOptions="Center" Text="Light Theme" Style="{StaticResource MediumLabelStyle}"/>
+  <controls:CircleImage Source="LightTheme.jpeg" HeightRequest="55"  WidthRequest="55" VerticalOptions="CenterAndExpand" HorizontalOptions="CenterAndExpand" Aspect="AspectFill">
+                   <controls:CircleImage.GestureRecognizers>
+                       <TapGestureRecognizer Tapped="TapGestureRecognizer_Tapped"/>
+                   </controls:CircleImage.GestureRecognizers>
+
+              </controls:CircleImage>
+              </StackLayout>
+            
+               <StackLayout Orientation="Horizontal">
+                       <Label VerticalOptions="Center" Text="Dark Theme" Style="{StaticResource MediumLabelStyle}"/>
+                    <controls:CircleImage Source="DarkTheme.jpg" VerticalOptions="CenterAndExpand" HeightRequest="55"  HorizontalOptions="CenterAndExpand" WidthRequest="55" Aspect="AspectFill">
+
+                    <controls:CircleImage.GestureRecognizers>
+                        <TapGestureRecognizer Tapped="TapGestureRecognizer_Tapped_1"/>
+                    </controls:CircleImage.GestureRecognizers>
+              </controls:CircleImage>
+               </StackLayout>
+      
+           </StackLayout>
+    </StackLayout>
+    </ContentPage.Content>
+</ContentPage>
